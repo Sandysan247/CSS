@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Robotics & Semantic HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins;
+            background: #0f172a;
+            color: #e5e7eb
+        }
+
+        header,
+        footer {
+            background: linear-gradient(90deg, #2563eb, #06b6d4);
+            padding: 1.5rem;
+            text-align: center
+        }
+
+        header h1 {
+            font-family: Orbitron;
+            letter-spacing: 3px
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            padding: 1.5rem
+        }
+
+        article,
+        aside {
+            background: #020617;
+            padding: 1.2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #06b6d4
+        }
+
+        section {
+            margin-bottom: 1rem
+        }
+
+        h2,
+        h3 {
+            color: #38bdf8
+        }
+
+        button {
+            background: #06b6d4;
+            border: none;
+            padding: .5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer
+        }
+
+        button:hover {
+            background: #38bdf8
+        }
+
+        figure {
+            text-align: center
+        }
+
+        img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px
+        }
+
+        mark {
+            background: #facc15;
+            color: black
+        }
+
+        @media(max-width:800px) {
+            main {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ROBOTICS</h1>
+        <p>The Future Powered by Semantic HTML</p>
+        <nav>
+            <a href="#intro">Intro</a>
+            <a href="#types">Types</a>
+            <a href="#future">Future</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section id="intro">
+                <h2>Introduction</h2>
+                <p><mark>Robotics</mark> blends AI, engineering, and coding to build smart machines.</p>
+                <p>Modern robotics evolved rapidly after <time datetime="1950">1950</time>.</p>
+            </section>
+
+            <section id="types">
+                <h3>Robot Types</h3>
+                <ul>
+                    <li>Industrial</li>
+                    <li>Medical</li>
+                    <li>Humanoid</li>
+                    <li>Space</li>
+                </ul>
+                <figure>
+                    <img src="https://erepublic.brightspotcdn.com/dims4/default/a7ea80e/2147483647/strip/true/crop/8081x4214+0+0/resize/840x438!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2F44%2F0c%2Fbf3043cf4952945a5b3281fcfa16%2Fadobestock-955269760.jpeg" />
+                    <figcaption>Humanoid Robot</figcaption>
+                </figure>
+            </section>
+
+            <section id="future">
+                <h3>Future Scope</h3>
+                <p>Robots will assist humans in healthcare, defense, and daily life.</p>
+                <button onclick="alert('Robotics is the future!')">Explore</button>
+            </section>
+        </article>
+
+        <aside>
+            <h3>Quick Fact</h3>
+            <p>Robots can learn using Machine Learning.</p>
+            <details>
+                <summary>More</summary>
+                <p>Some robots recognize emotions & faces.</p>
+            </details>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Robotics </p>
+        <address>Designed by Srijit Pal</address>
+    </footer>
+</body>
+
+</html>
