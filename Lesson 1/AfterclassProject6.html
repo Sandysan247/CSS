@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spicy Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #ff0066, #1a1a2e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Glass card */
+        .form-box {
+            width: 380px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            animation: pop 1s ease;
+        }
+
+        @keyframes pop {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            background: linear-gradient(90deg, #00f5ff, #ffdd00);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Input group */
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 12px 10px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.7);
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus~label,
+        .input-group input:valid~label,
+        .input-group select:focus~label {
+            top: -8px;
+            font-size: 0.8rem;
+            color: #00f5ff;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-bottom-color: #00f5ff;
+        }
+
+        /* Radio buttons */
+        .gender {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 25px;
+        }
+
+        .gender label {
+            cursor: pointer;
+        }
+
+        .gender input {
+            accent-color: #ffdd00;
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(90deg, #ffdd00, #ff0066);
+            color: black;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ffdd00;
+        }
+
+        /* Progress bar */
+        .progress {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .progress span {
+            display: block;
+            height: 100%;
+            width: 60%;
+            background: linear-gradient(90deg, #00f5ff, #ffdd00);
+            animation: load 2s infinite alternate;
+        }
+
+        @keyframes load {
+            from {
+                width: 30%;
+            }
+
+            to {
+                width: 90%;
+            }
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+        <h1>Register Now</h1>
+
+        <div class="progress">
+            <span></span>
+        </div>
+
+        <form>
+            <div class="input-group">
+                <input type="text" required>
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" required>
+                <label>Email Address</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+
+            <div class="input-group">
+                <select required>
+                    <option value="" hidden></option>
+                    <option>Student</option>
+                    <option>Teacher</option>
+                    <option>Developer</option>
+                </select>
+                <label>Role</label>
+            </div>
+
+            <div class="gender">
+                <label><input type="radio" name="g"> Male</label>
+                <label><input type="radio" name="g"> Female</label>
+                <label><input type="radio" name="g"> Other</label>
+            </div>
+
+            <button type="submit">Create Account 🚀</button>
+        </form>
+
+        <div class="footer-text">
+             HTML Forms | Developed By Srijit Pal
+        </div>
+    </div>
+
+</body>
+
+</html>
