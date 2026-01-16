@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Artificial Intelligence</title>
+
+    <!-- CSS Styling -->
+    <style>
+        /* Page base */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: #111827;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Glow effect */
+        .glow {
+            border: 2px solid #38bdf8;
+            box-shadow: 0 0 20px #38bdf8;
+        }
+
+        /* AI effect box */
+        .ai-box {
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #6366f1, #22d3ee);
+            color: black;
+            font-weight: bold;
+            transition: transform 0.4s ease, letter-spacing 0.4s ease;
+        }
+
+        /* Hover animation */
+        .ai-box:hover {
+            transform: scale(1.08);
+            letter-spacing: 3px;
+        }
+
+        /* Animated text */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ARTIFICIAL INTELLIGENCE</h1>
+        <p class="pulse">Powering the future of technology</p>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>What is AI?</h2>
+            <p>
+                Artificial Intelligence (AI) is the simulation of human intelligence
+                in machines that can learn, reason, and make decisions.
+            </p>
+        </div>
+
+        <div class="card glow">
+            <h2>Applications of AI</h2>
+            <ul>
+                <li>Healthcare</li>
+                <li>Self-driving cars</li>
+                <li>Chatbots</li>
+                <li>Defense technology</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Future of AI</h2>
+            <p>
+                AI will play a major role in education, business, and national security.
+            </p>
+        </div>
+
+        <div class="ai-box">
+            Hover over this box to see CSS effects 🚀
+        </div>
+
+    </div>
+
+    <footer>
+        © Designed By Srijit 
+    </footer>
+
+</body>
+
+</html>
