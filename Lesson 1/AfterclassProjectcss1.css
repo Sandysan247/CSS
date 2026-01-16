@@ -1,0 +1,71 @@
+/* Page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef2f5;
+}
+
+/* Header */
+header {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Card sections */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Color example */
+.color-box {
+    background-color: #93c5fd;
+    color: #1e3a8a;
+    padding: 15px;
+}
+
+/* Padding & margin example */
+.space-box {
+    background-color: #fde68a;
+    padding: 30px;
+    margin: 10px 0;
+}
+
+/* Border example */
+.border-box {
+    border: 3px solid #6366f1;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+/* Flexbox example */
+.flex-box {
+    display: flex;
+    gap: 10px;
+}
+
+.flex-box div {
+    background-color: #a7f3d0;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #cbd5e1;
+}
