@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netaji Tribute Film</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Slab:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Slab', serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Background music button */
+        #musicControl {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ffcc00;
+            color: #000;
+            padding: 10px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 100;
+            font-weight: bold;
+        }
+
+        /* Slideshow Container */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            max-width: 80%;
+            max-height: 60%;
+            border-radius: 20px;
+            box-shadow: 0 0 40px #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .slide h2 {
+            font-size: 3rem;
+            color: #ffcc00;
+            font-family: 'Great Vibes', cursive;
+            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff6600;
+            margin-bottom: 10px;
+        }
+
+        .slide p {
+            font-size: 1.5rem;
+            color: #fff;
+            max-width: 80%;
+            line-height: 1.6;
+            text-shadow: 0 0 5px #000;
+        }
+
+        /* Navigation */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            margin-top: -22px;
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 2rem;
+            transition: 0.3s;
+            border-radius: 50%;
+            user-select: none;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .prev:hover,
+        .next:hover {
+            background: rgba(255, 204, 0, 0.7);
+        }
+
+        .prev {
+            left: 30px;
+        }
+
+        .next {
+            right: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #ffcc00;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Music Control -->
+    <div id="musicControl">Play Music</div>
+    <audio id="bgMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-epic.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="slide active">
+            <img src="https://via.placeholder.com/800x450.png?text=Netaji+Scene+1" alt="Netaji Scene 1">
+            <h2>Netaji Subhas Chandra Bose</h2>
+            <p>"Give me blood, and I shall give you freedom!"</p>
+        </div>
+
+        <div class="slide">
+            <img src="https://via.placeholder.com/800x450.png?text=Indian+National+Army" alt="INA">
+            <h2>Indian National Army</h2>
+            <p>Founded and led the INA to fight for India's independence, inspiring millions to join the struggle.</p>
+        </div>
+
+        <div class="slide">
+            <img src="https://via.placeholder.com/800x450.png?text=Azad+Hind+Government" alt="Azad Hind">
+            <h2>Azad Hind Government</h2>
+            <p>Established a provisional government in exile to legitimize the fight against British colonial rule.</p>
+        </div>
+
+        <div class="slide">
+            <img src="https://via.placeholder.com/800x450.png?text=Leadership+and+Vision" alt="Leadership">
+            <h2>Leadership & Vision</h2>
+            <p>Unified Indian freedom fighters with a bold vision for a free and strong India.</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+
+    <footer>
+        © 2026 Tribute to Netaji Subhas Chandra Bose - Forever the Hero of India
+    </footer>
+
+    <script>
+        // Music Control
+        const music = document.getElementById('bgMusic');
+        const musicControl = document.getElementById('musicControl');
+        musicControl.addEventListener('click', () => {
+            if (music.paused) {
+                music.play();
+                musicControl.textContent = "Pause Music";
+            } else {
+                music.pause();
+                musicControl.textContent = "Play Music";
+            }
+        });
+
+        // Slideshow Logic
+        let slides = document.querySelectorAll('.slide');
+        let current = 0;
+        const nextSlide = () => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        };
+        const prevSlide = () => {
+            slides[current].classList.remove('active');
+            current = (current - 1 + slides.length) % slides.length;
+            slides[current].classList.add('active');
+        };
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+
+        // Auto slideshow every 8 seconds
+        setInterval(nextSlide, 8000);
+    </script>
+
+</body>
+
+</html>
