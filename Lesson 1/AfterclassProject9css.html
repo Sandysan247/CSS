@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hobby-card {
+            transition: transform 0.3s;
+        }
+
+        .hobby-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+        </div>
+    </nav>
+
+    <!-- Hobbies Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">My Hobbies</h2>
+            <div class="row g-4">
+
+                <!-- Cricket -->
+                <div class="col-md-4">
+                    <div class="card hobby-card shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Cricket" class="card-img-top" alt="Cricket">
+                        <div class="card-body">
+                            <h5 class="card-title">Playing Cricket</h5>
+                            <p class="card-text">I love playing cricket with friends. It keeps me active and teaches
+                                teamwork.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drawing -->
+                <div class="col-md-4">
+                    <div class="card hobby-card shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Drawing" class="card-img-top" alt="Drawing">
+                        <div class="card-body">
+                            <h5 class="card-title">Drawing</h5>
+                            <p class="card-text">Drawing helps me express creativity and imagination through art.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acting -->
+                <div class="col-md-4">
+                    <div class="card hobby-card shadow-sm">
+                        <img src="https://via.placeholder.com/400x250?text=Acting" class="card-img-top" alt="Acting">
+                        <div class="card-body">
+                            <h5 class="card-title">Acting</h5>
+                            <p class="card-text">Acting allows me to explore different characters and emotions on stage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2026 My Portfolio | Designed with Bootstrap</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
