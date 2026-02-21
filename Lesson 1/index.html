@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: #050816;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent 40%);
+            animation: moveBg 15s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveBg {
+            0% {
+                transform: translate(-25%, -25%);
+            }
+
+            50% {
+                transform: translate(-50%, -50%);
+            }
+
+            100% {
+                transform: translate(-25%, -25%);
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(90deg, cyan, blue, magenta);
+            box-shadow: 0 0 30px cyan;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px white;
+            }
+
+            to {
+                text-shadow: 0 0 25px cyan;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            width: 40%;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+            transition: 0.4s;
+        }
+
+        .column:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px magenta;
+        }
+
+        .column h2 {
+            text-align: center;
+            color: cyan;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            margin: 15px 0;
+        }
+
+        .project a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            background: black;
+            color: cyan;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 0 15px cyan;
+        }
+
+        .project a:hover {
+            background: magenta;
+            color: white;
+            box-shadow: 0 0 25px magenta;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .column {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🚀 My Project Library 🚀</h1>
+        <p>Designed by Srijit Pal</p>
+    </header>
+
+    <div class="container">
+
+        <!-- HTML Column -->
+        <div class="column">
+            <h2>HTML Projects</h2>
+
+            <div class="project">
+                <a href="Activity1.html">
+                    HTML Activity 1
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity1'.html">
+                    HTML Activity 1'
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="Activity2.html" >
+                    HTML Activity 2
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity3.html">
+                    HTML Activity 3
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity3'.html">
+                    HTML Activity 3'
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity4.html">
+                    HTML Activity 4
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity4'.html">
+                    HTML Activity 4'
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity4(3).html">
+                    HTML Activity 4''
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity5.html">
+                    HTML Activity 5
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity5'.html">
+                    HTML Activity 5'
+                </a>
+            </div>
+
+        </div>
+
+        <!-- CSS Column -->
+        <div class="column">
+            <h2>CSS Projects</h2>
+
+            <div class="project">
+                <a href="Activity1(CSS).html" >
+                    CSS Activity 1
+                </a>
+            </div>
+
+            <div class="project">
+                <a href="Activity2(css).html" >
+                    CSS Activity 2
+                </a>
+            </div>
+            <div class="project">
+                <a href="Activity2css.html" >
+                    CSS Activity 2'
+
+        </div>
+        <div class="project">
+            <a href="Activity2css''.html" >
+                CSS Activity 2''
+            </div>
+
+    </div>
+
+
+</body>
+
+</html>
